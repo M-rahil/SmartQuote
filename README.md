@@ -82,6 +82,7 @@ npm run dev
 ## Author
 
 Mohammed Rahil Raza
+Thanay Nalumasa
 
 ## License
 
