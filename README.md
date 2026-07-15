@@ -135,6 +135,13 @@ VITE_API_URL=
 
 ---
 
+## Live Demo
+
+- **Frontend:** https://smartquote-ksl0.onrender.com
+- **Backend API:** https://smartquote-backend-meho.onrender.com/api/health
+
+---
+
 ## Future Improvements
 
 - AI-assisted proposal generation
