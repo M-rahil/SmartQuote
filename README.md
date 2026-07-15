@@ -1,54 +1,92 @@
 # SmartQuote
 
-Full-stack freelance pricing intelligence platform built with React, Node.js, Express.js, MongoDB, and Tailwind CSS.
+SmartQuote is a full-stack freelance pricing platform that helps freelancers generate market-based project quotations using configurable pricing factors such as skill, experience, project complexity, urgency, and regional market rates.
+
+---
 
 ## Features
 
-- JWT Authentication
-- Real-time quote generation
-- Multi-factor pricing engine
-- PDF proposal generation
-- Analytics dashboard
+- User authentication using JWT
+- Dynamic pricing engine
+- Market-based hourly rate calculation
+- Categorized freelance services
+- PDF quote generation
 - Quote history management
-- MongoDB data persistence
+- User profile management
+- Responsive user interface
+- MongoDB Atlas data persistence
+
+---
 
 ## Tech Stack
 
 ### Frontend
+
 - React
 - Vite
 - Tailwind CSS
+- Axios
+- React Router
 - Recharts
 
 ### Backend
+
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
+- Mongoose
 - JWT Authentication
+- Helmet
+- Express Rate Limit
+
+---
 
 ## Project Structure
 
-```text
-smartquote/
+```
+SmartQuote/
+│
 ├── backend/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── server.js
+│
 ├── frontend/
+│   ├── public/
+│   ├── src/
+│   └── vite.config.js
+│
 ├── README.md
 └── .gitignore
 ```
 
+---
+
 ## Pricing Engine
 
-Factors used:
+Project estimates are generated using the following parameters:
 
-- Skill
+- Skill / Service
 - Experience Level
 - Country
 - Project Complexity
-- Urgency
+- Timeline / Urgency
+- Market Multiplier
+- Overhead Cost
 - Profit Margin
-- Overhead Costs
+
+---
 
 ## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/M-rahil/SmartQuote.git
+cd SmartQuote
+```
 
 ### Backend
 
@@ -66,24 +104,56 @@ npm install
 npm run dev
 ```
 
+---
+
+## Environment Variables
+
+### Backend
+
+```env
+PORT=5000
+MONGODB_URI=
+JWT_SECRET=
+FRONTEND_URL=
+```
+
+### Frontend
+
+```env
+VITE_API_URL=
+```
+
+---
+
 ## Deployment
 
-- Frontend: Vercel
-- Backend: Render
-- Database: MongoDB Atlas
+| Component | Platform |
+|----------|----------|
+| Frontend | Render |
+| Backend | Render |
+| Database | MongoDB Atlas |
+
+---
 
 ## Future Improvements
 
-- AI-generated proposals
-- Currency conversion
+- AI-assisted proposal generation
+- Multi-currency pricing
+- Email quote sharing
+- Invoice generation
+- Client management
 - Team collaboration
-- Contract management
+
+---
 
 ## Author
 
-Mohammed Rahil Raza
-Thanay Nalumasa
+**Mohammed Rahil Raza Thanay Nalumasa**
+
+GitHub: https://github.com/M-rahil
+
+---
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
