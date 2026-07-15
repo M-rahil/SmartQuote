@@ -73,18 +73,31 @@ export default function Calculator() {
   const [clientName, setClientName] = useState('');
 
   useEffect(() => {
-    skillsApi.getAll().then(res => {
+  skillsApi.getAll()
+    .then(res => {
+      console.log("API Response:", res.data);
+
       const all = res.data.skills;
+      console.log("All skills:", all);
+
       setSkills(all);
+
       const byCat = {};
       all.forEach(s => {
         if (!byCat[s.category]) byCat[s.category] = [];
         byCat[s.category].push(s);
       });
+
+      console.log("Grouped:", byCat);
+
       setSkillsByCategory(byCat);
-      if (all.length) setForm(p => ({ ...p, skill: all[0].skill }));
-    }).catch(console.error);
-  }, []);
+
+      if (all.length) {
+        setForm(p => ({ ...p, skill: all[0].skill }));
+      }
+    })
+    .catch(console.error);
+}, []);
 
   const calculate = useCallback(async () => {
     if (!form.skill) return;
